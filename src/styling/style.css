@@ -1,0 +1,27 @@
+/*Navbar Style*/
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Courier New";
+    height: auto;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: None;
+    width: 30%;
+    align-items: center;
+}
+
+.links > a{
+    text-decoration: None;
+    color: black;
+}
+
+.links a:hover{
+    color: red;
+}
+
