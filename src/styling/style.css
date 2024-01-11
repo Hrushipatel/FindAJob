@@ -1,27 +1,100 @@
-/*Navbar Style*/
+/* Navbar Style */
+.fix_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #223438;
+    z-index: 1;
+    color: white;
+}
 
-.navbar{
+.navbar {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     font-family: "Courier New";
     height: auto;
+    padding: 10px;
 }
 
-.links{
+.links {
     display: flex;
-    justify-content: space-evenly;
-    text-decoration: None;
-    width: 30%;
     align-items: center;
+    
 }
 
-.links > a{
-    text-decoration: None;
-    color: black;
+.links > a {
+    text-decoration: none;
+    color: white;
+    margin-right: 60%;
+    padding: 5px;
 }
 
-.links a:hover{
+.links a:hover {
     color: red;
+    transform: scale(1.2);
+    transition: ease-in 0.3s;
+}
+
+/* Sidebar Style */
+.GripLine {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.GripLine .FontAwesomeIcon{
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+}
+
+.SideMenu {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+    transition: ease-in;
+    transition-duration: 0.5s;
+    transform: translateX(100%);
+}
+
+.FontAwesomeIcon1{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.SideMenu.active {
+    opacity: 1;
+    width: 22%;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-in, width 0.5s ease-in;
+    background-color: #465b5f;
+    /* #394f53 */
+}
+
+.SideMenu.active .FontAwesomeIcon1{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.side-menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+.side-menu-items > p {
+    margin-top: 30px;
 }
 
